@@ -3,16 +3,25 @@
 
 A lightweight GPT-style decoder-only transformer trained from scratch on Shakespeare text.  
 Implements: tokenization, transformer blocks, self-attention, positional embeddings, training loop, and text generation — all in pure PyTorch.
+### Results
+Not very meaningful right now because parameters are very low and the model was trained for very few iterations (GPU compute limitation).
+
+---
+
+### Goal
+The goal here is to understand and implement a transformer **from scratch**.  
+More things will be applied and experimented with continuously.
+
 
 ---
 
 ## 🚀 Features
-- ✓ Custom character-level tokenizer (saved + reloadable)
-- ✓ Decoder-only Transformer architecture (GPT-mini)
-- ✓ Trained on Shakespeare dataset
-- ✓ Generate text from a starting prompt
-- ✓ Model + tokenizer saving & loading
-- ✓ TensorBoard metrics logging
+- 🔡 Custom character-level tokenizer (JSON-saved + reloadable)
+- 🧱 Decoder-only Transformer (GPT-mini architecture)
+- 🧠 Multi-Head Self-Attention
+- 📉 TensorBoard-logged training metrics
+- 💾 Model + checkpoint + tokenizer saving
+- ✍️ Text generation from promt 
 
 ---
 
@@ -57,7 +66,61 @@ random_seed   = 1337
 
 > Loss steadily decreases → model is learning patterns from text.
 
+## 🧪 Run Inference – Load Model & Generate Text
+
+Below is a step-by-step example to load the trained GPT model, tokenizer, and generate text.
+
 ---
+
+### 1️⃣ Load Model
+
+```python
+import torch
+from model import GPTModel
+
+device = 'cuda' if torch.cuda.is_available() else 'cpu'
+
+model = GPTModel()
+model.load_state_dict(
+    torch.load("model_weights/gpt_model_state_2.pt")
+)
+model.to(device)
+model.eval()
+```
+
+### 2️⃣ Load Tokenizer (JSON)
+```python
+import json
+
+with open("/content/drive/MyDrive/Projects/GPT/tokenizer/char_tokenizer.json", "r") as f:
+    tokenizer = json.load(f)
+
+char_to_integer = tokenizer["char_to_integer"]
+integer_to_char = {int(k): v for k, v in tokenizer["integer_to_char"].items()}
+
+```
+
+
+### 3️⃣ Encoder / Decoder Helpers
+```python
+encoder = lambda text: [char_to_integer[c] for c in text]
+decoder = lambda tokens: ''.join(integer_to_char[t] for t in tokens)
+```
+
+### 3️⃣ Encoder / Decoder Helpers
+```python
+encoder = lambda text: [char_to_integer[c] for c in text]
+decoder = lambda tokens: ''.join(integer_to_char[t] for t in tokens)
+```4️⃣ Text Generation
+🔁 Generate 4 random samples
+cont = torch.zeros((4, 1), dtype=torch.long, device=device)
+
+for i in range(4):
+    print("\n-------------------------------\n")
+    output_tokens = model.generate(cont, max_new_tokens=50)[i].tolist()
+    print(decoder(output_tokens))
+```
+```
 
 ## 🧪 Text Generation Example
 
