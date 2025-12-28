@@ -9,8 +9,8 @@ Not very meaningful right now because parameters are very low and the model was 
 ---
 
 ### Goal
-The goal here is to understand and implement a transformer **from scratch**.  
-More things will be applied and experimented with continuously.
+The goal here is to understand and implement a decoder only transformer **from scratch**.  
+**More things will be applied and experimented with continuously.***
 
 
 ---
