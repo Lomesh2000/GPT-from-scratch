@@ -139,5 +139,24 @@ for i in range(4):
 ```
 ```
 
-## 🧪 Text Generation Example
+## 🧪 Text Generation Example (Not Meaningful but the model captures the outline and the words are correclty spelled/written so something achived in that direction)
+Clown:
+He does the warlike.
 
+AUTOLYCUS:
+Is the business of us with his state?
+
+Shepherd:
+If you had rather be so little, then,
+you can like manner lie, sir, he had a passent rot
+him.
+
+Clown:
+This is a strange word thing for him; whose continual hour
+uneder our absence? there is no coolsity to cock the
+occkat home to his bawd: the most raise of his
+name no belove subdued and battle words allowing, that
+lost add to come him. Bid this before him troop.
+
+MENENIUS:
+Sir, I'll find upon him, and the 
