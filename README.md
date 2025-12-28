@@ -64,6 +64,20 @@ random_seed   = 1337
 ### 🪜 Per-Step Training Loss (Batch-level change)
 ![Per Step Loss](losses_curves/train_step_loss.png)
 
+## 📊 Training Metrics after applying lr schedular and cosine weight decay
+
+### Training Loss Curve
+![Training Loss](losses_curves/losses_lr_sch_wei_decay/loss_train.svg)
+
+### Validation Loss Curve
+![Validation Loss](losses_curves/losses_lr_sch_wei_decay/val_train.svg)
+
+### Validation Loss Curve
+<img src="losses_curves/losses_lr_sch_wei_decay/val_train.svg" width="600px" />
+
+### Per_step Training Loss Curve
+![Per Step Loss](losses_curves/losses_lr_sch_wei_decay/loss_train_step.svg)
+
 > Loss steadily decreases → model is learning patterns from text.
 
 ## 🧪 Run Inference – Load Model & Generate Text
