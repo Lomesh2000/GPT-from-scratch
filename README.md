@@ -64,7 +64,16 @@ random_seed   = 1337
 ### 🪜 Per-Step Training Loss (Batch-level change)
 ![Per Step Loss](losses_curves/train_step_loss.png)
 
+<!-- <div align="center">
+  <img src="losses_curves/train_loss.png" width="32%" />
+  <img src="losses_curves/val_loss.png" width="32%" />
+  <img src="losses_curves/train_step_loss.png" width="32%" />
+</div> -->
+
 ## 📊 Training Metrics after applying lr schedular and cosine weight decay
+### Added Learning Rate Scheduler
+### Added Gradinent Clipping 
+### Early Stopping Criteria (Would be useful if iteration are increased to high numbers)
 
 ### Training Loss Curve
 ![Training Loss](losses_curves/losses_lr_sch_wei_decay/loss_train.svg)
