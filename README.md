@@ -107,12 +107,9 @@ encoder = lambda text: [char_to_integer[c] for c in text]
 decoder = lambda tokens: ''.join(integer_to_char[t] for t in tokens)
 ```
 
-### 3️⃣ Encoder / Decoder Helpers
+### 4️⃣ Text Generation
 ```python
-encoder = lambda text: [char_to_integer[c] for c in text]
-decoder = lambda tokens: ''.join(integer_to_char[t] for t in tokens)
-```4️⃣ Text Generation
-🔁 Generate 4 random samples
+# Generate 4 random samples
 cont = torch.zeros((4, 1), dtype=torch.long, device=device)
 
 for i in range(4):
