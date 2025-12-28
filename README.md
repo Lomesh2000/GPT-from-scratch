@@ -70,10 +70,7 @@ random_seed   = 1337
 ![Training Loss](losses_curves/losses_lr_sch_wei_decay/loss_train.svg)
 
 ### Validation Loss Curve
-![Validation Loss](losses_curves/losses_lr_sch_wei_decay/val_train.svg)
-
-### Validation Loss Curve
-<img src="losses_curves/losses_lr_sch_wei_decay/val_train.svg" width="600px" />
+![Validation Loss](losses_curves/losses_lr_sch_wei_decay/val_loss.png)
 
 ### Per_step Training Loss Curve
 ![Per Step Loss](losses_curves/losses_lr_sch_wei_decay/loss_train_step.svg)
